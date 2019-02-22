@@ -1,9 +1,31 @@
 <template>
-  <div class="container-fluid mt-4">
-    <div class="row text-center">
-      <div class="col">
-        <h1 id="title">Evzin</h1>
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+      <div class="container">
+        <h1 class="display-4">Evzin</h1>
+        <p class="lead">In the beautiful cities of Palm Springs and Palm Desert.</p>
       </div>
+    </div>
+    <div id="carouselFade" class="carousel slide carousel-fade" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/media/img/evzin1.jpg" class="d-block w-100" alt="Evzin">
+        </div>
+        <div class="carousel-item">
+          <img src="/media/img/evzin2.jpg" class="d-block w-100" alt="Evzin">
+        </div>
+        <div class="carousel-item">
+          <img src="/media/img/evzin3.jpg" class="d-block w-100" alt="Evzin">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselFade" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselFade" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
     <div class="container">
       <div class="row text-center mt-4">
@@ -44,13 +66,23 @@ export default {
 };
 </script>
 <style>
-  #title {
-    background-color: white;
-}
+
+  .carousel {
+    width: 80%;
+    margin: auto;
+    align-content: center;
+    text-align: center;
+  }
+
+  .jumbotron {
+    border: 1px solid black;
+  }
 
   .col {
-  background-color: white;
-  margin: 2px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 1em;
 }
 
   .container {
