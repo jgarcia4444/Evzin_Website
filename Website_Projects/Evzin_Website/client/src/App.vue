@@ -21,7 +21,6 @@
           <router-link to="/Catering">
             <a class="nav-link" href="/Catering">Catering</a>
           </router-link>
-          
         </li>
       </ul>
     </div>
@@ -42,28 +41,12 @@
   }
 
   html { 
-    background: url('../public/media/img/chios_pattern.jpg') no-repeat center center fixed; 
+    background: url('../public/media/img/chios_pattern.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
   }
 
-  .footer {
-    background-color: black;
-    color: white;
-  }
-
-  .mt-auto {
-    margin-top: auto!important;
-  }
-
-  .py-3 {
-    padding-bottom: 1rem!important;
-  }
-
-  footer {
-    display: block;
-  }
 
 </style>
