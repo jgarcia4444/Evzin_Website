@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid">
+  <div class="container">
     <div class="jumbotron text-center">
       <div class="container">
         <h1 class="display-4">Evzin</h1>
@@ -76,10 +76,11 @@ export default {
 
   .jumbotron {
     border: 1px solid black;
+    background-color: rgba(255, 255, 255, 0.9);
   }
 
   .col {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.9);
     border: 1px solid black;
     border-radius: 5px;
     margin: 1em;

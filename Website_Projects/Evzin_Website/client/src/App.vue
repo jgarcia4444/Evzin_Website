@@ -27,7 +27,7 @@
     </nav>
     <router-view/>
     <div class="navbar navbar-default navbar-static-bottom navbar-fixed-bottom">
-      <span class="text-muted">Evzin Palm Springs &copy; Jake Garcia</span>
+      <span class="text-muted">EVZIN Palm Springs &copy; Jake Garcia</span>
     </div>
   </div>
 </template>
@@ -38,6 +38,7 @@
     width: 100%;
     height: auto;
     background-color: rgba(0,0,0,0.0);
+    font-family: sans-serif;
   }
 
   html { 
