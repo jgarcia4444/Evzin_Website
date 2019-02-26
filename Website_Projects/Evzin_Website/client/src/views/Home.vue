@@ -1,11 +1,13 @@
 <template>
-  <div class="container">
+  <div class="container mt-4">
+    <!--Main page header in a jumbotron-->
     <div class="jumbotron text-center">
       <div class="container">
         <h1 class="display-4">Evzin</h1>
         <p class="lead">In the beautiful cities of Palm Springs and Palm Desert.</p>
       </div>
     </div>
+    <!-- carousel with the fade transition and arrow buttons -->
     <div id="carouselFade" class="carousel slide carousel-fade" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -27,6 +29,7 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
+    <!-- Three responsive columns with quick overviews main topics about EVZIN -->
     <div class="container">
       <div class="row text-center mt-4">
         <div class="row">
@@ -77,6 +80,8 @@ export default {
   .jumbotron {
     border: 1px solid black;
     background-color: rgba(255, 255, 255, 0.9);
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   .col {
