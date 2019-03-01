@@ -14,7 +14,7 @@
           <router-link to="/">
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </router-link>
-      </li>
+        </li>
         <li class="nav-item">
           <router-link to="/About">
             <a class="nav-link" href="/About">About Evzin</a>
@@ -25,6 +25,11 @@
             <a class="nav-link" href="/Catering">Catering</a>
           </router-link>
         </li>
+        <li class="nav-item">
+          <router-link to="/Art">
+            <a class="nav-link" href="/Art">Art</a>
+          </router-link>
+        </li>
       </ul>
     </div>
     </nav>
@@ -32,9 +37,38 @@
     <router-view/>
     <!-- Places a footer at the bottom of each page -->
     <div class="navbar navbar-default navbar-static-bottom navbar-fixed-bottom">
-      <span class="text-muted">EVZIN Palm Springs &copy; Jake Garcia</span>
-      <a href="https://www.facebook.com/evzinpalmsprings/posts/773926186120629"><img src="/media/img/facebook.png" alt=""></a>
-      <a href="https://www.instagram.com/evzinpalmsprings/"><img src="/media/img/instaIcon.png" alt=""></a>
+      <span class="text-muted">EVZIN Palm Springs &copy;</span>
+      <!-- Phone number and address
+            Save for later use -->
+      <!--<div>
+        Phone: (760) 656-8764 Address: 411 E Palm Canyon Dr, Palm Springs, CA 92264
+      </div>-->
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Menu
+      </button>
+
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">EVZIN Menu</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+             Foooooooooooddddd 
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <a class="icon" target="_blank" href="https://www.facebook.com/evzinpalmsprings/posts/773926186120629"><img src="/media/img/facebook.png" alt=""></a>
+        <a class="icon" target="_blank" href="https://www.instagram.com/evzinpalmsprings/"><img src="/media/img/instaIcon.png" alt=""></a>
+      </div>
     </div>
   </div>
 </template>
@@ -56,5 +90,9 @@
     background-size: cover;
   }
 
+  .icon {
+    float: right;
+    margin-right: 10px;
+  }
 
 </style>

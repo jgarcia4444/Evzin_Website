@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import Home from './views/Home.vue';
 import About from './views/About.vue';
 import Catering from './views/Catering.vue';
+import Art from './views/Art.vue';
 
 Vue.use(Router);
 
@@ -22,6 +23,11 @@ export default new Router({
       path: '/Catering',
       name: 'catering',
       component: Catering,
+    },
+    {
+      path: '/Art',
+      name: 'art',
+      component: Art,
     },
   ],
 });
