@@ -43,7 +43,7 @@
       <!--<div>
         Phone: (760) 656-8764 Address: 411 E Palm Canyon Dr, Palm Springs, CA 92264
       </div>-->
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+      <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#exampleModal">
         Menu
       </button>
 
@@ -65,7 +65,7 @@
           </div>
         </div>
       </div>
-      <div>
+      <div id="iconDiv">
         <a class="icon" target="_blank" href="https://www.facebook.com/evzinpalmsprings/posts/773926186120629"><img src="/media/img/facebook.png" alt=""></a>
         <a class="icon" target="_blank" href="https://www.instagram.com/evzinpalmsprings/"><img src="/media/img/instaIcon.png" alt=""></a>
       </div>
@@ -93,6 +93,11 @@
   .icon {
     float: right;
     margin-right: 10px;
+  }
+
+  .navbar-fixed-bottom {
+    background-color:rgba(0, 0, 0, 0.9);
+    margin-top: 20px;
   }
 
 </style>

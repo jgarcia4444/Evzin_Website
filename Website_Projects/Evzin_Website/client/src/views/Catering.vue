@@ -1,7 +1,8 @@
 <template>
     <div class="container text-center mt-4">
-        <h1>Catering</h1>
+        
         <div class="container-fluid mt-4">
+            <h1>Catering</h1>
             <img src="/media/img/catering1.jpg" class="img-fluid" alt="Responsive image">
         </div>
         <div class="container-fluid mt-4 mb-4">
@@ -41,8 +42,9 @@
                 </tbody>
             </table>
         </div>
-        <h1>Private Events</h1>
+        
         <div class="container-fluid mt-4">
+            <h1>Private Events</h1>
             <img src="/media/img/catering1.jpg" class="img-fluid" alt="">
         </div>
         <div class="container-fluid mt-4">
@@ -80,6 +82,37 @@
                 </tbody>
             </table>
         </div>
+        <!--Contact Info form-->
+        <div class="container-fluid mt-4">
+            <h1>
+                Contact Information
+            </h1>
+            <form>
+                <div class="row">
+                    <div class="form-group col">
+                        <label for="fName">First Name</label>
+                        <input type="text" class="form-control" id="fName" required/>
+                    </div>
+                    <div class="form-group col">
+                        <label for="lName">Last Name</label>
+                        <input type="text" class="form-control" id="lName" required/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col">
+                        <label for="phoneNumber">Phone Number</label>
+                        <input type="tel" class="form-control" id="phoneNumber" required/>
+                    </div>
+                    <div class="form-group col">
+                        <label for="orderDate">Date of Event</label>
+                        <input type="date" class="form-control" id="orderDate" required/>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-outline-dark">
+                    Submit
+                </button>
+            </form>
+        </div>
     </div>
 </template>
 
@@ -94,21 +127,33 @@ export default {
         background-color: rgba(255, 255, 255, 0.9);
         color: black;
         border: 1px solid black;
-        border-radius: 5px;
+        /* border-radius: 5px; */
     }
     img {
         width: 80%;
         height: auto;
+        margin-top: 20px;
     }
 
     p {
         background-color: rgba(255, 255, 255, 0.9);
         color: black;
         border: 1px solid black;
-        border-radius: 5px;
+        /* border-radius: 5px; */
     }
 
     tbody {
         background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    form {
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 5px;
+        border: 1px solid black;
+        margin-top: 20px;
+    }
+
+    .form-group, .col {
+        border: none;
     }
 </style>
