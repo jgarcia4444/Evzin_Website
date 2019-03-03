@@ -87,11 +87,14 @@
             <h1>
                 Contact Information
             </h1>
-            <form>
+            <form @submit.prevent="infoSent()">
+                <div v-if="formSubmitted" class="alert alert-dark" role="alert">
+                    Thank you! We will be with you shortly.
+                </div>
                 <div class="row">
                     <div class="form-group col">
                         <label for="fName">First Name</label>
-                        <input type="text" class="form-control" id="fName" required/>
+                        <input v-model="fName" type="text" class="form-control" id="fName" required/>
                     </div>
                     <div class="form-group col">
                         <label for="lName">Last Name</label>
@@ -119,6 +122,18 @@
 <script>
 export default {
     name: 'catering',
+    data() {
+        return {
+            formSubmitted: false,
+            fName: "",
+        }    
+    },
+    methods: {
+
+        infoSent() {
+            this.formSubmitted = true;
+        },
+    },
 }
 </script>
 
