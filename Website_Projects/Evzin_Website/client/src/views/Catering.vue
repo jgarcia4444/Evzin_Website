@@ -91,24 +91,32 @@
                 <div v-if="formSubmitted" class="alert alert-dark" role="alert">
                     Thank you! We will be with you shortly.
                 </div>
+                <div class="row" v-if="errors.length">
+                    <div>
+                        <ul>
+                            <li v-for="error in errors">{{error}}</li>
+                        </ul>  
+                    </div>
+                    
+                </div>
                 <div class="row">
                     <div class="form-group col">
                         <label for="fName">First Name</label>
-                        <input v-model="fName" type="text" class="form-control" id="fName" required/>
+                        <input v-model="fName" type="text" class="form-control" id="fName" />
                     </div>
                     <div class="form-group col">
                         <label for="lName">Last Name</label>
-                        <input type="text" class="form-control" id="lName" required/>
+                        <input v-model="lName" type="text" class="form-control" id="lName" />
                     </div>
                 </div>
                 <div class="row">
                     <div class="form-group col">
                         <label for="phoneNumber">Phone Number</label>
-                        <input type="tel" class="form-control" id="phoneNumber" required/>
+                        <input v-model="telNum" type="tel" class="form-control" id="phoneNumber" />
                     </div>
                     <div class="form-group col">
                         <label for="orderDate">Date of Event</label>
-                        <input type="date" class="form-control" id="orderDate" required/>
+                        <input v-model="date" type="date" class="form-control" id="orderDate" />
                     </div>
                 </div>
                 <button type="submit" class="btn btn-outline-dark">
@@ -125,16 +133,43 @@ export default {
     data() {
         return {
             formSubmitted: false,
-            fName: "",
-        }    
+            fName: null,
+            lName: null,
+            telNum: null,
+            date: null,
+            errors: [],
+            events: [],
+        }
+           
     },
     methods: {
 
         infoSent() {
-            this.formSubmitted = true;
+            this.errors = []
+            if (this.fName && this.lName && this.telNum && this.date) {
+                let cateringEvent = {
+                    fName: this.fName,
+                    lName: this.lName,
+                    telNum: this.telNum,
+                    date: this.date
+                }
+                this.events.push(cateringEvent)
+                this.formSubmitted = true
+            }
+            else {
+                if (!this.fName) this.errors.push('Please provide your first Name')
+                if (!this.lName) this.errors.push('Please provide your last name')
+                if (!this.telNum) this.errors.push('Please provide your telephone number')
+                if (!this.date) this.errors.push('Please provide the date for your event')
+                this.formSubmitted = false
+            }
+            this.fName = null
+            this.lName = null
+            this.telNum = null
+            this.date = null
         },
     },
-}
+};
 </script>
 
 <style scoped>
